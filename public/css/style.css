@@ -1,0 +1,103 @@
+/*******************************************************************
+* Spacing : Margin and padding realted css rules;
+*******************************************************************/
+.no-padding 						{padding: 0px !important}
+.padding-5 							{padding: 5px !important}
+.padding-top-5 						{padding-top: 5px !important}
+.padding-left-5 					{padding-left: 5px !important}
+.padding-right-5 					{padding-right: 5px !important}
+.padding-bottom-5 					{padding-bottom: 5px !important}
+.padding-10 						{padding: 10px !important}
+.padding-top-10 					{padding-top: 10px !important}
+.padding-left-10 					{padding-left: 10px !important}
+.padding-right-10 					{padding-right: 10px !important}
+.padding-bottom-10 					{padding-bottom: 10px !important}
+.padding-15 						{padding: 15px !important}
+.padding-top-15 					{padding-top: 15px !important}
+.padding-left-15 					{padding-left: 15px !important}
+.padding-right-15 					{padding-right: 15px !important}
+.padding-bottom-15 					{padding-bottom: 15px !important}
+.padding-20 						{padding: 20px !important}
+.padding-top-20 					{padding-top: 20px !important}
+.padding-left-20 					{padding-left: 20px !important}
+.padding-right-20 					{padding-right: 20px !important}
+.padding-bottom-20 					{padding-bottom: 20px !important}
+.padding-25 						{padding: 25px !important}
+.padding-top-25 					{padding-top: 25px !important}
+.padding-left-25 					{padding-left: 25px !important}
+.padding-right-25 					{padding-right: 25px !important}
+.padding-bottom-25 					{padding-bottom: 25px !important}
+.padding-30 						{padding: 30px !important}
+.padding-35 						{padding: 35px !important}
+.padding-40 						{padding: 40px !important}
+.padding-top-40 					{padding-top: 40px !important}
+.padding-left-40 					{padding-left: 40px !important}
+.padding-right-40 					{padding-right: 40px !important}
+.padding-bottom-40 					{padding-bottom: 40px !important}
+.padding-45 						{padding: 45px !important}
+.padding-50 						{padding: 50px !important}
+.padding-top-50 					{padding-top: 50px !important}
+.padding-left-50 					{padding-left: 50px !important}
+.padding-right-50 					{padding-right: 50px !important}
+.padding-bottom-50 					{padding-bottom: 50px !important}
+.margin-2 							{margin: 2px !important}
+.margin-top-2 						{margin-top: 2px !important}
+.no-margin 							{margin: 0px !important}
+.margin-5 							{margin: 5px !important}
+.margin-top-5 						{margin-top: 5px !important}
+.margin-left-5 						{margin-left: 5px !important}
+.margin-right-5 					{margin-right: 5px !important}
+.margin-bottom-5 					{margin-bottom: 5px !important}
+.margin-10 							{margin: 10px !important}
+.margin-top-10 						{margin-top: 10px !important}
+.margin-left-10 					{margin-left: 10px !important}
+.margin-right-10 					{margin-right: 10px !important}
+.margin-bottom-10 					{margin-bottom: 10px !important}
+.margin-15 							{margin: 15px !important}
+.margin-top-15 						{margin-top: 15px !important}
+.margin-left-15 					{margin-left: 15px !important}
+.margin-right-15 					{margin-right: 15px !important}
+.margin-bottom-15 					{margin-bottom: 15px !important}
+.margin-20 							{margin: 20px !important}
+.margin-top-20 						{margin-top: 20px !important}
+.margin-left-20 					{margin-left: 20px !important}
+.margin-right-20 					{margin-right: 20px !important}
+.margin-bottom-20 					{margin-bottom: 20px !important}
+.margin-25 							{margin: 25px !important}
+.margin-top-25 						{margin-top: 25px !important}
+.margin-left-25 					{margin-left: 25px !important}
+.margin-right-25 					{margin-right: 25px !important}
+.margin-bottom-25 					{margin-bottom: 25px !important}
+.margin-30 							{margin: 30px !important}
+.margin-top-30 						{margin-top: 30px !important}
+.margin-left-30 					{margin-left: 30px !important}
+.margin-right-30 					{margin-right: 30px !important}
+.margin-bottom-30 					{margin-bottom: 30px !important}
+.margin--5 							{margin: -5px !important}
+.margin-top--10						{margin-top: -10px !important}
+.margin-top--15						{margin-top: -15px !important}
+.margin-top--20						{margin-top: -20px !important}
+/*******************************************************************
+* Font styles
+*******************************************************************/
+.font-14  	{font-size:14px !important;}
+.font-15  	{font-size:15px !important;}
+.font-16  	{font-size:16px !important;}
+.font-17  	{font-size:17px !important;}
+.font-18  	{font-size:18px !important;}
+.font-19  	{font-size:19px !important;}
+.font-20  	{font-size:20px !important;}
+.font-21  	{font-size:21px !important;}
+.font-22  	{font-size:22px !important;}
+.font-23  	{font-size:23px !important;}
+
+.home-bg 		{background:url('../img/frogs.jpg') no-repeat center center fixed;background-size: cover;}
+.border-white 	{border: solid #fff 1px !important}
+.btn-block,.full-width		{width:100%;}
+div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #fff url('../img/frogs.jpg') no-repeat center center; }
+
+::-webkit-input-placeholder {color:#fff;}
+:-moz-placeholder {color:#fff;opacity:1;}
+::-moz-placeholder {color:#fff;opacity:  1;}
+:-ms-input-placeholder {color:#fff;}
+:placeholder-shown {color:#fff;}

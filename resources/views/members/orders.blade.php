@@ -1,9 +1,9 @@
 @extends('members.layout')
 @section('content')
-	<div class="row padding-top-10">
+	<div class="row margin-top-30">
 		@if(isset($orders))
-			<table class="striped bordered">
-				<caption>My Orders</caption>
+			<table class="dashboard-table striped bordered">
+				<caption  class="margin-bottom-10">My Orders</caption>
 				<thead>
 					<tr>
 						<td>Order Name</td>
@@ -27,10 +27,10 @@
 					<td>{{$order->status}}</td>
 					<td>{{$order->type}}</td>
 					<td>{{$order->price}}</td>
-					<td>{{$order->travel_date}}</td>
-					<td><i class="material-icons">visibility</i></td>
-					<td><i class="material-icons">assignment</i></td>
-					<td><i class="material-icons">delete</i></td>
+					<td>{{$order->travel_date->format('Y-m-d')}}</td>
+					<td class='center-align'><i class="tiny  material-icons">visibility</i></td>
+					<td class='center-align'><i class="tiny  material-icons">assignment</i></td>
+					<td class='center-align'><i class="tiny  material-icons">delete</i></td>
 				</tr>
 				@endforeach
 				</tbody>

@@ -14,8 +14,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/signup',"StaticController@store")->name('signup');
     Route::get("/dashboard","MembersController@dashboard")->name('dashboard');
     Route::post("/search","ProcessDataController@search")->name('search');
-    Route::post("/sender_order","ProcessDataController@prepareOrder")->name("sender_order");
+    Route::any("/sender_order","ProcessDataController@prepareOrder")->name("sender_order");
     Route::get("/orders","ProcessDataController@getOrders")->name('orders');
     Route::get("/get_order/{order_name}","ProcessDataController@getOrder")->name('get_order');
     Route::get("messages","ProcessDataController@messages")->name("messages");
+    Route::get("apply/{order_id}","ProcessDataController@applyForOrder")->name('apply');
+    Route::get("cancel/{order_id}","ProcessDataController@cancelApplication")->name('cancel');
+    Route::get("requests","ProcessDataController@getRequests")->name('requests');
+    Route::get("mark-read","ProcessDataController@markAsRead")->name('markasread');
+    Route::get("send-message","ProcessDataController@sendMessage")->name('send_message');
+    Route::get("unread-messages","ProcessDataController@getUnreadMessages")->name('unread_messages');
 });

@@ -48,7 +48,11 @@ class TindliAuthController extends Controller
                 if($request->session()->has('search_order_num')){
                     return redirect()->route('get_order',['order_name'=>$request->session()->get('search_order_num')]);
                 }
-                return redirect()->route('dashboard');
+                else if ($request->session()->has('register_sender_order')){
+                    return redirect()->route('sender_order');
+                }
+                else
+                    return redirect()->route('dashboard');
             } else {
                 # write a logic here to redirect to the error page showing login error.
                 # not needed right away

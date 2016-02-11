@@ -17,12 +17,12 @@
                   <a href="{{url('/')}}" class="brand-logo black-text">TINDLI</a>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
-                    <li class="active"><a href="" class="black-text">Track Shipment</a></li>
+                    <!-- <li class="active"><a href="" class="black-text">Track Shipment</a></li> -->
                     <li><a href="{{url('login')}}" class="black-text">Login</a></li>
                     <li><a href="{{url('register')}}" class="black-text">Register</a></li>
                   </ul>
                   <ul class="side-nav" id="mobile-demo">
-                    <li><a href="" class="black-text">Track Shipment</a></li>
+                    <!-- <li><a href="" class="black-text">Track Shipment</a></li> -->
                     <li><a href="{{url('login')}}" class="black-text">Login</a></li>
                     <li><a href="{{url('register')}}" class="black-text">Register</a></li>
                   </ul>
@@ -33,7 +33,7 @@
             @yield('content')
         </div>
         <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="{{url('js/jquery.min.js')}}"></script>
         <script src="{{url('js/tindli.min.js')}}"></script>
         <script src="{{url('js/init.js')}}"></script>
         @yield('javascript')

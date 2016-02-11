@@ -34,7 +34,7 @@
             @yield('content')
         </div>
         <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="{{url('js/jquery.min.js')}}"></script>
         <script src="{{url('js/tindli.min.js')}}"></script>
         <script src="{{url('js/init.js')}}"></script>
         @yield('javascript')

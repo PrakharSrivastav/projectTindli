@@ -101,3 +101,7 @@ div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; hei
 ::-moz-placeholder {color:#fff;opacity:  1;}
 :-ms-input-placeholder {color:#fff;}
 :placeholder-shown {color:#fff;}
+
+.dashboard-table thead >*,
+.dashboard-table tbody >* {font-size:12px !important;}
+.dashboard-table td {padding:2px !important;}

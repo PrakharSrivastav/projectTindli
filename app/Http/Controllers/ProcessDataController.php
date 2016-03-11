@@ -9,6 +9,7 @@ use App\User;
 use Auth;
 use Illuminate\Http\Request;
 use Validator;
+use Session;
 
 class ProcessDataController extends Controller
 {
@@ -19,7 +20,7 @@ class ProcessDataController extends Controller
         $data['source_location_id'] = $request->input('source_location_hidden');
         $data['destination_location_id'] = $request->input('destination_location_hidden');
         $data['destination_location'] = $request->input('destination_location');
-        $data['size'] = $request->input('size');
+        // $data['size'] = $request->input('size');
         $sender_or_carrier = $request->input('sender_or_carrier');
         $data['travel_date'] = $request->input('travel_date');
 
@@ -33,19 +34,19 @@ class ProcessDataController extends Controller
             'source_location' => 'required',
             'destination_location' => 'required',
             'travel_date' => 'required',
-            'size' => 'required',
+            // 'size' => 'required',
         ]);
 
         # if the values exist in the session then reset them.
         # else set it in session
         $session_data = [];
-        $session_data [] = ['source_location' => $data['source_location']];
-        $session_data [] = ['source_location_hidden' => $data['source_location_id']];
-        $session_data [] = ['destination_location_hidden' => $data['destination_location_id']];
-        $session_data [] = ['destination_location' => $data['destination_location']];
-        $session_data [] = ['sender_or_carrier' => $sender_or_carrier];
-        $session_data [] = ['size' => $data['size']];
-        $session_data [] = ['travel_date' => $data['travel_date']];
+        $session_data ['source_location'] = $data['source_location'];
+        $session_data ['source_location_hidden'] = $data['source_location_id'];
+        $session_data ['destination_location_hidden'] = $data['destination_location_id'];
+        $session_data ['destination_location'] = $data['destination_location'];
+        $session_data ['sender_or_carrier' ] =  $sender_or_carrier;
+        // $session_data [] = ['size' => $data['size';
+        $session_data ['travel_date'] = $data['travel_date'];
         $this->addToSession($session_data,$request);
 
         # and redirect to the homepage with the error messages.
@@ -57,8 +58,8 @@ class ProcessDataController extends Controller
             # if all is good so far check whether the user intends to be a carrier or sender
             # if the user is a sender
             if ($data['sender_or_carrier'] == 'sender') {
-                $this->addToSession([['order_num' => str_random(10).date('YmdHHIISS').str_random(10)]]);
-
+                $this->addToSession(['order_num' => str_random(10).date('YmdHHIISS').str_random(10)],$request);
+                // print_r($request->session());
                 return view('public.sender-order');
             } elseif ($data['sender_or_carrier'] = 'carrier') {
                 $orders = Order::where('to_city_id', $data['destination_location_id'])
@@ -82,10 +83,8 @@ class ProcessDataController extends Controller
             foreach ($session_data as $key => $value) {
                 if ($request->session()->has($key)) {
                     $request->session()->forget($key);
-                    $request->session()->put($key, $value);
-                } else {
-                    $request->session()->put($key, $value);
                 }
+                $request->session()->put($key, $value);
             }
         }
     }
@@ -97,13 +96,13 @@ class ProcessDataController extends Controller
             $data['order_description'] = $request->input('order_description');
             $data['order_type'] = $request->input('order_type');
             $data['order_price'] = $request->input('order_price');
-
+            $data['size'] = $request->input('size');
             # set the values in the session
-            $session_data = [];
-            $session_data[] = ['order_description' => $request->input('order_description')];
-            $session_data[] = ['order_type' => $request->input('order_type')];
-            $session_data[] = ['order_price' => $request->input('order_price')];
-            $this->addToSession($session_data,$request);
+            // $session_data = [];
+            // $session_data[] = ['order_description' => $request->input('order_description')];
+            // $session_data[] = ['order_type' => $request->input('order_type')];
+            // $session_data[] = ['order_price' => $request->input('order_price')];
+            $this->addToSession($data,$request);
         }
 
         # if the user is not authorized then ask for login
@@ -115,7 +114,7 @@ class ProcessDataController extends Controller
 
             return redirect()->route('orders');
         } else {
-            $this->addToSession([['register_sender_order' => true]],$request);
+            $this->addToSession(['register_sender_order' => true],$request);
 
             return redirect()->route('login');
         }

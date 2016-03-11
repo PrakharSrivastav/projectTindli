@@ -21,9 +21,9 @@
 					@endif
 
 					@if(Session::has('source_loction_hidden'))
-                    <input autocomplete='off' id="source_location_hidden" value="{{Session::get('source_location_hidden')}}"name="source_location_hidden" class="location_id" type="hidden"> 
+                    <input autocomplete='off' id="source_location_hidden" value="{{Session::get('source_location_hidden')}}"name="source_location_hidden" class="location_id" type="hidden">
                     @else
-                    <input autocomplete='off' id="source_location_hidden" name="source_location_hidden" class="location_id" type="hidden"> 
+                    <input autocomplete='off' id="source_location_hidden" name="source_location_hidden" class="location_id" type="hidden">
                     @endif
                     <div id="source_location_collection" class="collection margin-top--15"></div>
                 </div>
@@ -40,22 +40,22 @@
                     @endif
                     <div id="destination_location_collection" class="collection margin-top--15"></div>
                 </div>
-                <div class="input-field col s12 m2">
+                <div class="input-field col s12 m3">
                     @if(Session::has('travel_date'))
                     <input autocomplete='off' id="travel_date" value="{{Session::get('travel_date')}}" name="travel_date" type="date" class="datepicker white-text" placeholder="Input Date" class="validate"/>
                     @else
                     <input autocomplete='off' id="travel_date" name="travel_date" type="date" class="datepicker white-text" placeholder="Input Date" class="validate"/>
 					@endif
                 </div>
-                <div class="input-field white-text col s12 m2">
+                {{-- <div class="input-field white-text col s12 m2">
                     <select id='size' name='size'>
                         <option value="">Chose Size</option>
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option>
                     </select>
-                </div>
-                <div class="col s12 m2">
+                </div> --}}
+                <div class="col s12 m3">
                     <button type="submit" class="btn margin-top-25  btn-block waves-effect waves-light">Search</button>
                 </div>
             </div>

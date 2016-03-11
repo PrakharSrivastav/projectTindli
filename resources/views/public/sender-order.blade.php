@@ -1,6 +1,7 @@
 @extends('public.nobg-layout')
 @section('content')
 <div class="container ">
+
     <div class="row col s12 m6 " >
         <table class="striped">
             <caption>
@@ -15,7 +16,7 @@
             <tbody>
                 <tr>
                     <td>Order Number</td>
-                    <td>{{Session::get('order_num')}}</td>
+                    <td><?= session('order_num') ?></td>
                 </tr>
                 <tr>
                     <td>From</td>
@@ -25,10 +26,10 @@
                     <td>To</td>
                     <td>{{Session::get('destination_location')}}</td>
                 </tr>
-                <tr>
+                {{-- <tr>
                     <td>Size</td>
                     <td>{{Session::get('size')}}</td>
-                </tr>
+                </tr> --}}
                 <tr>
                     <td>Travel Date</td>
                     <td>{{Session::get('travel_date')}}</td>
@@ -44,7 +45,7 @@
                 <textarea id="order_description" name="order_description" class="materialize-textarea"></textarea>
                 <label for="order_description">Desription</label>
             </div>
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <select id="order_type" name="order_type">
                     <option value="" disabled selected>Choose your Type</option>
                     <option value="1">Option 1</option>
@@ -52,6 +53,15 @@
                     <option value="3">Option 3</option>
                 </select>
                 <label>Package Type</label>
+            </div>
+            <div class="input-field col s6">
+                <select id="size" name="size">
+                    <option value="" disabled selected>Choose your Size</option>
+                    <option value="1">Size 1</option>
+                    <option value="2">Size 2</option>
+                    <option value="3">Size 3</option>
+                </select>
+                <label>Package Size</label>
             </div>
             <div class="input-field col s12">
                 <input id="order_price" name="order_price" type="text" class="validate"/>

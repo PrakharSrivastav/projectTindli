@@ -5,6 +5,8 @@ Route::get("/successful-registration/{token}","StaticController@registrationSucc
 Route::post("/getLocations/{input}","StaticController@getLocationsApi")->name("getLocations");
 Route::get("/how","StaticController@howItWorks")->name('how');
 
+
+
 Route::group(['middleware' => ['web']], function () {
 	Route::get("/logout","TindliAuthController@logout")->name("logout");
 	Route::post("/login","TindliAuthController@login")->name("attempt_login");
@@ -24,4 +26,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get("mark-read","ProcessDataController@markAsRead")->name('markasread');
     Route::get("send-message","ProcessDataController@sendMessage")->name('send_message');
     Route::get("unread-messages","ProcessDataController@getUnreadMessages")->name('unread_messages');
+	Route::get('auth/facebook', 'TindliAuthController@redirectToFacebook')->name('facebook');
+	Route::get('auth/facebook/callback', 'TindliAuthController@handleFacebookCallback')->name('facebookCallback');
+	Route::get('auth/google', 'TindliAuthController@redirectToGoogle')->name('google');
+	Route::get('auth/google/callback', 'TindliAuthController@handleGoogleCallback')->name('googleCallback');
 });

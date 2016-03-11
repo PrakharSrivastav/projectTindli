@@ -14,7 +14,7 @@
             <div class="navbar ">
             <nav class="z-depth-0 container" style="background-color:transparent;">
                 <div class="nav-wrapper">
-                  <a href="{{url('/')}}" class="brand-logo black-text">TINDLI</a>
+                  <a href="{{route('dashboard')}}" class="brand-logo black-text">TINDLI</a>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
                   <ul class="right hide-on-med-and-down">
                     <!-- <li><a href="" class="black-text">Track Shipment</a></li> -->

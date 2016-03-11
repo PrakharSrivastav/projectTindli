@@ -158,7 +158,7 @@ class StaticController extends Controller
         curl_close($ch);
         return $message;
     }
-    
+
     private function clean($string)
     {
         $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.

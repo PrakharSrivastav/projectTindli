@@ -7,12 +7,12 @@
                     <div class="flow-text padding-top-15 padding-bottom-15 center-align red-text text-darken-2 grey lighten-2">Login</div>
                     <div class="row no-margin  grey lighten-2">
                         <div class="input-field col s12">
-                            <button type="button" class="light waves-effect red darken-1 btn btn-block">Login with google</button>
+                            <a href="{{route('google')}}" class="light waves-effect red darken-1 btn btn-block">Login with google</a>
                         </div>
                     </div>
                     <div class="row no-margin padding-bottom-20 grey lighten-2">
                         <div class="input-field col s12">
-                            <button type="button" class="light waves-effect blue darken-4 btn btn-block">Login with facebook</button>
+                            <a href="{{route('facebook')}}"  class="light waves-effect blue darken-4 btn btn-block">Login with facebook</a>
                         </div>
                     </div>
                     <div class="row padding-top-15 margin-top-15 grey-text text-darken-2">

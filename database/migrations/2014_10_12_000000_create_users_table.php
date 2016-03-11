@@ -13,15 +13,15 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            
+
             $table->increments('id');
             $table->string('fname');
             $table->string('lname');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('password', 80);
             $table->softDeletes();
             # ENUM 0->inactive , 1->inactive
-            $table->enum('active',[0,1])->default(0);   
+            $table->enum('active',[0,1])->default(0);
             # Enum 0->unknown , 1->male, 2->female
             $table->enum('gender',[0,1,2])->default(0);
             $table->date('dob')->nullable();
@@ -35,6 +35,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->string('registration_token', 40)->nullable();
             $table->timestamps();
+            $table->enum('login_type',[0,1,2])->default(0);// 0->normal , 1->fb, 2->google
+            $table->unique(['email','login_type']);
         });
     }
 

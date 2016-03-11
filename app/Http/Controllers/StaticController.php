@@ -26,6 +26,11 @@ class StaticController extends Controller
         return view('public.register');
     }
 
+    public function termsAndCondition()
+    {
+        return view("public.terms-and-conditions");
+    }
+
     public function store(Request $request)
     {
         $fname      = $request->input("fname");

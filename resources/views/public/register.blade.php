@@ -95,7 +95,7 @@
             </div>
             <div style="clear:both"></div>
             <div class="card-action grey lighten-2 padding-20">
-                <a href="" class="red-text darken-2">
+                <a href="{{route('tnc')}}" class="red-text darken-2">
                     Read Terms and conditions
                 </a>
             </div>

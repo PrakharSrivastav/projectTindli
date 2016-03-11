@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 Route::get("/successful-registration/{token}","StaticController@registrationSuccess")->name("registered");
 Route::post("/getLocations/{input}","StaticController@getLocationsApi")->name("getLocations");
 Route::get("/how","StaticController@howItWorks")->name('how');
-
+Route::get("/tnc","StaticController@termsAndCondition")->name('tnc');
 
 
 Route::group(['middleware' => ['web']], function () {
